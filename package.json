@@ -1,0 +1,57 @@
+{
+  "name": "arcade",
+  "private": true,
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "ci": "yarn lint && yarn test",
+    "format": "yarn format:source && yarn format:other",
+    "format:other": "yarn pretty --write",
+    "format:source": "yarn lint:source --fix",
+    "lint": "yarn lint:source && yarn lint:other",
+    "lint:other": "yarn pretty --check",
+    "lint:source": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
+    "pretty": "prettier --ignore-path .gitignore --prose-wrap always '**/*.{json,md}'",
+    "test": "yarn workspaces run test"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.1.0",
+    "@typescript-eslint/parser": "^2.1.0",
+    "eslint": "^6.3.0",
+    "eslint-config-prettier": "^6.2.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.16.0",
+    "eslint-plugin-node": "^9.2.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^5.2.3",
+    "prettier": "^1.18.2",
+    "typescript": "~3.5.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:jest/recommended",
+      "plugin:vue/recommended",
+      "standard",
+      "plugin:@typescript-eslint/recommended",
+      "prettier/standard",
+      "plugin:prettier/recommended"
+    ],
+    "parser": "vue-eslint-parser",
+    "parserOptions": {
+      "parser": "@typescript-eslint/parser"
+    },
+    "rules": {
+      "prettier/prettier": "error"
+    }
+  },
+  "volta": {
+    "node": "12.10.0",
+    "yarn": "1.17.3"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

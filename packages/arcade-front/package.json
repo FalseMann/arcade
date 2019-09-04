@@ -1,0 +1,39 @@
+{
+  "name": "arcade-front",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel build src/index.html",
+    "dev": "parcel src/index.html",
+    "test": "jest"
+  },
+  "dependencies": {
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.1.0",
+    "vue-hot-reload-api": "^2.3.3",
+    "vue-property-decorator": "^8.2.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@vue/component-compiler-utils": "^3.0.0",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "babel-core": "^6.26.3",
+    "jest": "^24.9.0",
+    "parcel-bundler": "^1.12.3",
+    "typescript": "~3.5.0",
+    "vue-jest": "^3.0.4",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts",
+      "vue"
+    ],
+    "preset": "ts-jest",
+    "transform": {
+      "^.+\\.vue$": "vue-jest"
+    }
+  }
+}
