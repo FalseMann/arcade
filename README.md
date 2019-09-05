@@ -1,5 +1,7 @@
 # Arcade
 
+![Build status](https://api.travis-ci.com/FalseMann/arcade.svg?branch=develop)
+
 > MAME cabinet front-end UI, management, and utility software
 
 ## Documentation
